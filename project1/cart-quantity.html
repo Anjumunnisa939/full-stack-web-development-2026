@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart quantity</title>
+
+
+</head>
+<style>
+    button{
+        background-color: orange;
+        color:white;
+        border:solid;
+        border-color: black;
+        border-radius: 10px;
+        
+}
+button:hover{
+    background-color: red;
+    color:white;
+}
+button:active{
+    background-color: black;
+    color:white;
+}
+</style>
+<body>
+    <h1>
+        Cart Quality
+    </h1>
+    <div style="display:flex;gap:20px;flex-direction: column;">
+
+        <button onclick="
+            console.log(`cart quantity:${cartQuality}`);
+            ">Show Quantity</button>
+
+        <button onclick="cartQuality=cartQuality+1;
+         console.log(`cart quantity:${cartQuality}`);
+       ">Add to Cart </button>
+
+        <button onclick="cartQuality = cartQuality+2;
+           console.log(`cart quantity:${cartQuality}`); ">+2</button>
+
+
+
+        <button onclick="cartQuality = cartQuality+3;
+           console.log(`cart quantity:${cartQuality}`); ">+3</button>
+        <button onclick="cartQuality=cartQuality-cartQuality;
+        console.log(`cart quality:${cartQuality
+        }`);
+        console.log('cart was reset.')">Reset Cart</button>
+    </div>
+    <script>
+        let cartQuality = 0;
+let i=5;
+console.log(i);
+let j=6;
+console.log(i+=j);
+    </script>
+</body>
+
+</html>
