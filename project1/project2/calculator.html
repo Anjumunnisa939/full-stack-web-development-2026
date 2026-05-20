@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+
+</head>
+    <style>
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="
+    display:flex;
+    width:fit-content;
+    padding:10px 20px;
+    gap:10px;
+    border:solid black;">
+
+        <button onclick="
+        calculation = calculation + '1';
+        console.log(calculation);
+        ">
+            1
+        </button>
+
+        <button onclick="
+        calculation = calculation + '2';
+        console.log(calculation);
+        ">
+            2
+        </button>
+
+        <button onclick="
+        calculation = calculation + '3';
+        console.log(calculation);
+        ">
+            3
+        </button>
+
+        <button onclick="
+        calculation = calculation + '+';
+        console.log(calculation);
+        ">
+            +
+        </button>
+
+        <button onclick="
+        console.log(eval(calculation));
+        ">
+            =
+        </button>
+
+    </div>
+
+    <script>
+        let calculation = '';
+    </script>
+
+</body>
+
+</html>

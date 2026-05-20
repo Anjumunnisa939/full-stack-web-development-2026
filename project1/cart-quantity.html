@@ -10,24 +10,30 @@
 
 </head>
 <style>
-    button{
+    button {
         background-color: orange;
-        color:white;
-        border:solid;
+        color: white;
+        border: solid;
         border-color: black;
         border-radius: 10px;
         
-}
-button:hover{
-    background-color: red;
-    color:white;
-}
-button:active{
-    background-color: black;
-    color:white;
-}
+
+    }
+
+    button:hover {
+        background-color: red;
+        color: white;
+    }
+
+    button:active {
+        background-color: black;
+        color: white;
+    }
+
 </style>
+
 <body>
+
     <h1>
         Cart Quality
     </h1>
@@ -48,18 +54,33 @@ button:active{
 
         <button onclick="cartQuality = cartQuality+3;
            console.log(`cart quantity:${cartQuality}`); ">+3</button>
+
+
+        <button onclick="cartQuality=cartQuality+4;
+console.log(`cart quality:${cartQuality}`);">+4</button>
+
+
+        <button onclick="cartQuality=cartQuality+5;
+console.log(`cart quality:${cartQuality}`);">+5</button>
+
+        <button onclick="cartQuality=cartQuality-1;
+console.log(`after your decreasing the quantity is :${cartQuality}`);">-1</button>
+
+        <button onclick="cardQuality=cartQuality-2;
+console.log(`card quality:${cardQuality}`);">-2</button>
+        <button onclick="cardQuality=cartQuality-3;
+console.log(`card quality:${cardQuality}`);">-3</button>
+
         <button onclick="cartQuality=cartQuality-cartQuality;
         console.log(`cart quality:${cartQuality
         }`);
         console.log('cart was reset.')">Reset Cart</button>
+
     </div>
     <script>
         let cartQuality = 0;
-let i=5;
-console.log(i);
-let j=6;
-console.log(i+=j);
-    </script>
+
+</script>
 </body>
 
 </html>
