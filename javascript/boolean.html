@@ -13,7 +13,8 @@
 
 </style>
 <body>
-
+<input type="number" id="job">   
+<button onclick="Caller()">call</button>
 </body>
 <script>
     console.log(typeof 'true');
@@ -40,17 +41,47 @@ console.log(5!=6);//or gate type
 console.log(5!==5);
 //it also consist of bodmas 
 //brackets;*/;+-;comparison operators
+function Caller(){
+let age=document.getElementById("job").value;
+if(age>40)
+{
+    console.log('your eligible for job');
 
-
-
-
-
-
-
-</script>
-
-<script>
+}
+else if(age>=40){
+    console.log('your 50% eligible perform well there one option for your selection bro!!!');
     
+}
+else{
+console.log('sorry!! you not eligible for this job');
+}
+
+
+}
+false
+true
+let result=1>2;
+
+
+console.log(result);
+if(result){
+    console.log('your eligible');
+
+}
+else{
+    console.log('your not eligible');
+}
+
+
+
+
+
+
+
+
+
 </script>
+
+
 
 </html>

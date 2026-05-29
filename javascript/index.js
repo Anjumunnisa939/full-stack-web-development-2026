@@ -23,3 +23,25 @@ else{
     console.log('your not eligible SORRY!!!');
 }
     }
+
+    function Callcenter()
+{
+   let z=document.getElementById('Callcenter').value;
+    console.log(z);
+    if(z>1001){
+        console.log('Valid call center number');
+    }
+    else{
+        console.log('Invalid call center number');
+    }
+}
+function Salam(){
+    let nam=document.getElementById("salam").value;
+    console.log(`${nam}`);
+    if(nam==="Anjumunnisa"){
+        console.log('Namaste Anjumunnisa');
+    }
+    else{
+        console.log('who are you ???');
+    }
+}
