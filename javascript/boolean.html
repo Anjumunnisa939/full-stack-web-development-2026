@@ -21,103 +21,93 @@
 <button onclick="Maller()">Call</button>
 
 <p id="result"></p>
+<p id ="value"></p> 
 </body>
 <script>
-    console.log(typeof 'true');
-    console.log(typeof true);
-    //it tells what data type the boolean is
-   true
-    false
-    console.log(3>5);
-    let a = 6;
-    let b=9;
-    let c=a<=b;
-     let d=a>=b;
-    console.log(c);
-        console.log(d);
-        /*mainly comparison operators are 
->(greater than)
-<(less than)
->= greater tahn equal to;<= less than eual too;====(equal to);
-!== not equal to*/
-console.log(6=='6');
-console.log(6=='5');//it converts string to num
-console.log(5==='5');//it show as it is no coversions are there here
-console.log(5!=6);//or gate type 
-console.log(5!==5);
-//it also consist of bodmas 
-//brackets;*/;+-;comparison operators
-function Caller(){
-let age=document.getElementById("job").value;
-if(age>40)
-{
-    console.log('your eligible for job');
-
-}
-else if(age>=40){
-    console.log('your 50% eligible perform well there one option for your selection bro!!!');
     
-}
-else{
-console.log('sorry!! you not eligible for this job');
-}
-
-
-}
-false
-true
-let result=1>2;
-
-
-console.log(result);
-if(result){
-    console.log('your eligible');
-
-}
-else{
-    console.log('your not eligible');
-}
-
-console.log(1==1);
-console.log(3===3);
-if(true){
-    console.log('this is true');
-}
-else{
-    console.log('this is false');
-}
-function Allowances(){
-let rta=document.getElementById("allowances").value;
-if(rta>18){
-    console.log('you are eligible for allowances');
-}
-else if(rta==18){
-    console.log('you are 50% eligible for allowances');
-}
-else{
-    console.log('you are not eligible for allowances');
-}
-
-}
-
-function Maller() {
-    let age = Number(document.getElementById("jobs").value);
-
-    if (age > 40) {
-        document.getElementById("result").innerText =
-            "You are eligible for the job";
+    function Caller(){
+        const job = document.getElementById("job").value;
+        if(job>100000){
+            document.getElementById("result").innerHTML="You are hired";
+        }
+        else{
+            document.getElementById("result").innerHTML="You are not hired";
+        }
     }
-    else if (age >=40) {
-        document.getElementById("result").innerText =
-            "You are 50% eligible";
+
+    function Allowances(){
+        const allowances = document.getElementById("allowances").value;
+        if(allowances>5000){
+            document.getElementById("result").innerHTML="You are eligible for allowances";
+        }
+        else{
+            document.getElementById("result").innerHTML="You are not eligible for allowances";
+        }
     }
-    else {
-        document.getElementById("result").innerText =
-            "Sorry! You are not eligible";
+
+    function Maller(){
+        const jobs = document.getElementById("jobs").value;
+        if(jobs>50000){
+            document.getElementById("result").innerHTML="You are hired";
+        }
+        else{
+            document.getElementById("result").innerHTML="You are not hired";
+        }
     }
+    
+   //logical operators
+   console.log(true && false);//and
+    console.log(true || false);//or
+    console.log(!true);//not (opposite results)
+console.log(!false);
+if(1){
+    console.log("1 is truthy");
 }
+console.log(Boolean("Hello"));
+console.log(Boolean(1));
+console.log(Boolean([]));
+console.log(Boolean({}));
+
+if(5){
+    console.log("5 is truthy");
+}
+if(0){
+    console.log("0 is falsy");
+}
+let card=5;
+if(card){ 
+    console.log("You have a card");
+}
+console.log(!0);
+console.log('text'/5);
+let variable1;
+console.log(`${variable1}`);
+// we should use here let only to defined the vartiable
+const variable2=undefined;
+console.log(`${variable2}`);
+let sam=null;
+console.log(`${sam}`);
+//ONCE CHECK WHAT TYPE OF DATA IT IS 
+console.log(typeof(true));
+console.log(typeof(NaN));
+console.log(typeof(undefined));
+// if you have declared the variable by const you shuld declare the value also must and sahould 
+
+// leaerning types of the shortcut of if statements
+ const result=true ? 'truthy' : 'falsy'
+ console.log(result);
+ let name='anjumunnisa'? 'hii miss ANJUMUNNISA' : 'SORRY WHO ARE YOU '
+console.log(name);
+ let value=12?'correct' : 'wrong'
+ // i also printed trhis in the output on the web page also
+// value=document.getElementById("value").innerHTML=name;
+ console.log(value);
+//GUARD OPERATOR
+age=25;
+age && console.log('hello');
+
+
+
+
 </script>
-
-
-
 </html>
