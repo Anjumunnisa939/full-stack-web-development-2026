@@ -1,26 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-           <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>hour task
 
-        </title>
-        </head>
-        <body>
-<input type="number" id="hours">
-<BUTTON ONCLICK="myFunction()">Submit</BUTTON>
-        </body>
-        <script>
-            function myFunction() {
-            let hours=document.getElementById("hours").value;
-            hours>6 && hours<12 && 
-            console.log('Good Morning');
-            hours>=12 && hours<18 &&
-            console.log('Good Afternoon');
-            hours>=18 && hours<=24 &&
-            console.log('Good Evening');
-            }
-        </script>
-        </html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hour task
+
+    </title>
+</head>
+
+<body>
+    <h1>WISH YOUR COLLUGES AS PER THE TIME</h1>
+    <div>
+
+        <input type="number" id="hours">
+        <button onclick="myFunction()">call</button>
+    </div>
+    <h2 style="color:red;" id="display"></h2><!-- this to display the out put on web page-->
+
+    <style>
+        body {
+            background: radial-gradient(circle, lightblue);
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+
+
+        }
+
+        button {
+            border: 4px solid black;
+            border-radius: 12px;
+            height: 35px;
+            background-color: white;
+            color: green;
+        }
+
+        .div {
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 40px;
+        }
+
+        #hours {
+            border-radius: 12px;
+            height: 35px;
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        /*function myFunction() {
+        let hours=document.getElementById("hours").value;
+        hours>6 && hours<12 && 
+        console.log('Good Morning');
+        hours>=12 && hours<18 &&
+        console.log('Good Afternoon');
+        hours>=18 && hours<=24 &&
+        console.log('Good Evening');
+        }*/
+       
+
+function myFunction() {
+    let hours = Number(document.getElementById("hours").value);
+    let name = "Anjumunnisa";
+
+    let message =
+        (hours >= 6 && hours < 12)
+            ? `Good Morning ${name}`
+            : (hours >= 12 && hours < 17)
+                ? `Good Afternoon ${name}`
+                : (hours >= 17 && hours <= 24)
+                    ? `Good Evening ${name}`
+                    : "Sorry, wrong time";
+
+    document.getElementById("display").innerHTML = message;
+}
+
+            
+
+            // see the result in out put
+         
+
+         
+    </script>
+
+</html>
