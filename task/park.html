@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARK TICKET ENTRY</title>
+</head>
+
+<body>
+
+    <div class="body">
+
+        <div id="heading1">
+            <h1>
+                Welcome TO Piloan Park
+            </h1>
+        </div>
+        <div id="whitebox">
+
+        <div id="heading2">
+            <h3>TICKET FOR PARK BOOKING SEATS</h3>
+        </div>
+
+
+
+        <div id="center">
+            <input type="number" id="age" placeholder="Enter your age">
+            <button onclick="numberAge()">submit</button>
+       
+
+        </div>
+        <div>     <p id="result"></p></div>
+         
+</div>
+    </div>
+    
+
+
+
+
+
+    <style>
+        body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;;
+}
+        #center,#result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #heading1 {
+            animation-name: park;
+            animation-duration: 25s;
+            position: relative;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes park {
+            0% {
+                color: blue;
+            }
+
+            25% {
+                color: pink;
+            }
+
+            50% {
+                color: orange;
+            }
+
+            100% {
+                color: red
+            }
+
+            0% {
+                right: 100%;
+            }
+
+            100% {
+                right: -100%;
+            }
+        }
+       #whitebox {
+            width: 350px;
+            background: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        #heading2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        #result {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 100;
+            color: red;
+        }
+    </style>
+    <script>
+        function numberAge() {
+            let age = Number(document.getElementById("age").value);
+            let discount = (age / 2) + 5;
+
+            let result =
+                (age > 6 && age < 64)
+                    ? `You have to take ticket: ₹${discount}`
+                    : (age >= 64 && age < 100)
+                        ? "No charges to you, it's completely free 🎉"
+                        : "No entry, sorry for that!!";
+
+            document.getElementById("result").innerText = result;
+            console.log(result);
+        }
+
+    </script>
+</body>
+
+</html>

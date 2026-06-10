@@ -11,40 +11,54 @@
 </head>
 
 <body>
-    <h1>WISH YOUR COLLUGES AS PER THE TIME</h1>
-    <div>
-
+    
+    <div class="frist">
+        <h1>WISH YOUR COLLUGES AS PER THE TIME</h1>
+<div class="second">
         <input type="number" id="hours">
         <button onclick="myFunction()">call</button>
     </div>
     <h2 style="color:red;" id="display"></h2><!-- this to display the out put on web page-->
-
+</div>
     <style>
         body {
             background: radial-gradient(circle, lightblue);
-            display: grid;
+            display: flex;;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
+            flex-wrap:wrap;
 
 
         }
+.second{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
 
+}
         button {
-            border: 4px solid black;
+            border: 4px solid rgba(0, 0, 0, 0.899);
             border-radius: 12px;
             height: 35px;
             background-color: white;
             color: green;
         }
 
-        .div {
+        .frist {
             justify-content: space-around;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             margin-left: 40px;
+            border-color: black;
+            border: 5px solid black;
+         border-radius:25px;
+            background-color: white;
+          
         }
 
         #hours {
