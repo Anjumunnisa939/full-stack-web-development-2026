@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOSSING</title>
+    </head>
+    <body>
+        <div id="content">
+<!-- <input type="number" id="number" placeholder="enetr rthe valid number 0-1"> -->
+ <h1>click button and check the coin</h1>
+<button onclick="test()" id="click">click</button>
+<p id="display"></p>
+</div>
+    </body>
+    <style>
+        *{
+            background-image:url(../images/background.jpg) ;
+                background-size:auto;
+    background-repeat: repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+        }
+        #content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;        }
+
+            #click{
+                border: 2.5px solid black;
+                   width:100px;
+          padding: 12px 25px;
+  font-size: 18px;
+  background-color: red;
+  color: black;;
+
+
+
+  /* animation */
+  animation: blink 1s infinite;
+}
+            
+            #click:hover{
+                  border: 2.5px solid blue;
+        background-color: rgb(21, 163, 163);
+       
+     
+                  color:red;
+            }
+            #click:action{
+              animation: style 1s infinite;
+              ;
+            }
+            @keyframes style{
+                                0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+            
+
+            
+            
+    </style>
+    <script>
+ function test() {
+    let a = Math.random();
+
+    (a < 0.5)
+        ? (
+            console.log("HEAD"),
+            document.getElementById("display").innerHTML = "YOU GOT HEAD"
+          )
+        : (
+            console.log("TAILS"),
+            document.getElementById("display").innerHTML = "YOU GOT TAILS"
+          );
+
+    console.log("Random Number:", a);
+}
+
+    </script>
+    </html>
