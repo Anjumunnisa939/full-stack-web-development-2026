@@ -7,15 +7,78 @@
         <title>functions</title>
      </head>
      <body>
+<input type="text" id="name">
+<input type="number" id="age">
 
+<button onclick="school()">Submit</button>
      </body>
      <script>
-function function1(){
-    console.log('hello');
+
+   /* console.log('hello');
     console.log(2+2);
 }
 function1();
 //main moto of the function we use becausse here repeatation of same code get decreses and it decreses the no of code lines
-function1();
+function1();*/
+
+//return =gives the value out  from function
+//paarmete=input "which takes the value into the function"
+
+function box(){
+    console.log('hello');
+    console.log(2+2);
+}
+box();
+function box2(){
+    let a=5;
+    console.log(a);
+    function box3(){
+        let b=10;
+        console.log(b);
+    }
+    box3();
+}
+box2();
+     </script>
+     <script>
+        function calculate(parameter1) {
+            console.log(parameter1*5);
+        }
+        calculate(5);
+        function sum(a,b){
+            console.log(a+b);
+            alert(a+b);
+        }
+        sum(5,12);//number as parameter
+        sum(6,6);
+        sum(-3,-8)
+        function call($sam){
+            console.log(`hello mohammad!! ${$sam}`);
+        }
+        call(`how are you?`);//string interpolation
+     </script>
+     <script>
+        function school(){
+            let name=document.getElementById("name").value;
+        let age=document.getElementById("age").value;
+        
+    console.log(name);
+    console.log(age);
+      alert(`Name: ${name}\nAge: ${age}`);
+      if(age>30 && age<60)
+      
+        {console.log(`your eligible ${age} miss/mr ${name}`);
+         }
+         
+
+   
+}
+        school();
+function mutipleValue( a,b,c){
+    console.log(a+b+c);
+}
+mutipleValue(5,6,7);
+mutipleValue(5,5)//we get NAN because there 3 values we declare ponly two so not defined it shows
+
      </script>
      </html>
