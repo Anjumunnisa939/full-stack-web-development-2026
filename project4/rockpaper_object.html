@@ -57,12 +57,26 @@ gap:10px
    <button onclick="playGames('rock')">Rock</button>
    <button onclick="playGames('paper');"> paper</button>
    <button onclick="playGames('scissors') ">Scissors</button>
-   <p id="display"></p>
+  
     <!-- Math.random number lies in between 0<=number<1 -->
     
-
-
+<button onclick="score.wins=0;
+score.losses=0;
+score.ties=0;
+document.getElementById('display').innerHTML =
+'Wins: 0 Losses: 0 Ties: 0';
+">
+reset</button>
+ <p id="display"></p>
  <script>
+const score={
+    wins:0,
+    losses:0,
+    ties:0
+};
+
+
+
 function playGames(game) {
     const computerMove = pickComputerMove();
     let result = '';
@@ -96,11 +110,23 @@ function playGames(game) {
             result = 'Win';
         }
     }
+if(result==='Win'){
+    score.wins=score.wins+1;
 
+}
+else if(result==='Lose'){
+    score.losses=score.losses+1;
+
+}
+else if(result==='Tie'){
+    score.ties=score.ties+1;
+}
     document.getElementById('display').innerHTML =
-        `You picked ${game}. Computer picked ${computerMove}. Result = ${result}`;
+        `You picked ${game}. Computer picked ${computerMove}. Result = ${result}
+        wins${score.wins} ::loses${score.losses}:: tie${score.ties}`;
 
-    alert(`You picked ${game}. Computer picked ${computerMove}. Result = ${result}`);
+    alert(`You picked ${game}. Computer picked ${computerMove}. Result = ${result}
+     wins${score.wins} ::loses${score.losses}:: tie${score.ties}`);
 }
 
 function pickComputerMove() {
