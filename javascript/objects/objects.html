@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>objects in javascript</title>
+     </head>
+     <body>
+ 
+     </body>
+     <script>
+        const product={
+            name:'socks',
+            prize:1090
+        };
+        console.log(product);
+        console.log(product.name);//product.name=> is called doubt notation
+        console.log(product.prize);
+        //we can also change the value of the objects
+     product.name='anjumunnisa';
+     product.prize=1000;
+     
+       console.log(product);
+        console.log(product.name);
+        console.log(product.prize);
+    
+        let school={
+            name:'anjumunnisa',
+            id:226
+        }
+        console.log(school.name);
+        console.log(school.id);
+        school.name='sara';
+        console.log("I have changed the name as "+school.name);
+        console.log(school)
+    ;
+    // add new property to that school like standard section etc...
+    school.standard=true;
+    console.log(school);
+    school.standard='AIML CSE';
+    console.log(school);
+    delete school.standard;;
+    console.log(school);
+    school.parents=true;
+    school.parents='sana sam';
+    console.log(school);
+    // what type of the data is 
+    //like for example for data types we use yo check like
+    let a=5;
+    console.log(typeof a);
+    let bool=true;console.log(typeof bool);
+// by the same way we can check for object oriented language of the java script 
+console.log("this is the type of=> " +typeof (school));
+//we use the object make our code more organized
+     </script>
+     </html>
