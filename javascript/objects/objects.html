@@ -1,57 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>objects in javascript</title>
-     </head>
-     <body>
- 
-     </body>
-     <script>
-        const product={
-            name:'socks',
-            prize:1090
-        };
-        console.log(product);
-        console.log(product.name);//product.name=> is called doubt notation
-        console.log(product.prize);
-        //we can also change the value of the objects
-     product.name='anjumunnisa';
-     product.prize=1000;
-     
-       console.log(product);
-        console.log(product.name);
-        console.log(product.prize);
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>objects in javascript</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  //         const product={
+  //             name:'socks',
+  //             prize:1090
+  //         };
+  //         console.log(product);
+  //         console.log(product.name);//product.name=> is called doubt notation
+  //         console.log(product.prize);
+  //         //we can also change the value of the objects
+  //      product.name='anjumunnisa';
+  //      product.prize=1000;
+
+  //        console.log(product);
+  //         console.log(product.name);
+  //         console.log(product.prize);
+
+  //         let school={
+  //             name:'anjumunnisa',
+  //             id:226
+  //         }
+  //         console.log(school.name);
+  //         console.log(school.id);
+  //         school.name='sara';
+  //         console.log("I have changed the name as "+school.name);
+  //         console.log(school)
+  //     ;
+  //     // add new property to that school like standard section etc...
+  //     school.standard=true;
+  //     console.log(school);
+  //     school.standard='AIML CSE';
+  //     console.log(school);
+  //     delete school.standard;;
+  //     console.log(school);
+  //     school.parents=true;
+  //     school.parents='sana sam';
+  //     console.log(school);
+  //     // what type of the data is 
+  //     //like for example for data types we use yo check like
+  //     let a=5;
+  //     console.log(typeof a);
+  //     let bool=true;console.log(typeof bool);
+
+  // by the same way we can check for object oriented language of the java script 
+  // console.log("this is the type of=> " +typeof (school));
+  // //we use the object make our code more organized
+
+  let age = 'student_age';
+  //
+  const product2 = {
+    name: 'shirt',
+    ['run_time']: '5 HOURS',
+    ['student_age']: 5,
+    // [age]:5,//but here the main funda is we cann write directly['studennt-age']:5;
+    names: "shivani,sabha hema",
+    attendence: true,
+    rating:{//nested object
+      stars:4.5,
+      count:87,
+    },
     
-        let school={
-            name:'anjumunnisa',
-            id:226
-        }
-        console.log(school.name);
-        console.log(school.id);
-        school.name='sara';
-        console.log("I have changed the name as "+school.name);
-        console.log(school)
-    ;
-    // add new property to that school like standard section etc...
-    school.standard=true;
-    console.log(school);
-    school.standard='AIML CSE';
-    console.log(school);
-    delete school.standard;;
-    console.log(school);
-    school.parents=true;
-    school.parents='sana sam';
-    console.log(school);
-    // what type of the data is 
-    //like for example for data types we use yo check like
-    let a=5;
-    console.log(typeof a);
-    let bool=true;console.log(typeof bool);
-// by the same way we can check for object oriented language of the java script 
-console.log("this is the type of=> " +typeof (school));
-//we use the object make our code more organized
-     </script>
-     </html>
+    fun:function function1(time){// function calls in objects
+console.log('function inside objects');
+    }
+  };
+ 
+
+
+  //??the main question ariises in you is when we use []and . we []=>!@#$%^&*() special cases
+  //. universal common one 
+
+  console.log(product2);
+  console.log(product2.name);
+  console.log(product2['name'])//we use some are not defined by dot we take help pf square bracket
+  //see the this example 
+  //console.log(product2.delivery-time);
+  product2.delivery_time = '2hours';
+  product2 ['delivery-time']='56hours';
+  console.log(`the actual time of working is ${product2['delivery-time']}`);
+  console.log(product2.delivery_time);
+  console.log(product2['attendence']);
+  console.log(product2);
+  console.log(product2.rating);
+console.log(product2.rating.count);
+product2.fun();
+// function sam(value){
+//   console.log(`my value is ${value}and ${typeof value}`);
+// }
+// sam(100);
+console.log("console is tyep of =>"+typeof console)
+console.log("console.log is the type of =>"+typeof console.log);
+console.log( "Math is the type of =>"+typeof Math);
+console.log("Math.random is the type of =>"+typeof Math.random);
+</script>
+
+</html>
