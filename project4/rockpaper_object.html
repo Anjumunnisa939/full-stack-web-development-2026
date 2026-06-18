@@ -63,19 +63,32 @@ gap:10px
 <button onclick="score.wins=0;
 score.losses=0;
 score.ties=0;
+localStorage.removeItem('score');
 document.getElementById('display').innerHTML =
 'Wins: 0 Losses: 0 Ties: 0';
 ">
 reset</button>
  <p id="display"></p>
  <script>
-const score={
-    wins:0,
-    losses:0,
-    ties:0
+const score=(JSON.parse(localStorage.getItem('score')))|| {
+   wins:0,
+   losses:0,
+   ties:0
+
 };
 
 
+// console.log(score);
+
+// if(!score){
+
+// score={
+//    wins:0,
+//    losses:0,
+//    ties:0
+
+// };
+// }
 
 function playGames(game) {
     const computerMove = pickComputerMove();
@@ -121,6 +134,7 @@ else if(result==='Lose'){
 else if(result==='Tie'){
     score.ties=score.ties+1;
 }
+localStorage.setItem('score',JSON.stringify(score));
     document.getElementById('display').innerHTML =
         `You picked ${game}. Computer picked ${computerMove}. Result = ${result}
         wins${score.wins} ::loses${score.losses}:: tie${score.ties}`;

@@ -99,10 +99,46 @@ product2.fun();
 //   console.log(`my value is ${value}and ${typeof value}`);
 // }
 // sam(100);
-console.log("console is tyep of =>"+typeof console)
+console.log("console is type of =>"+typeof console)
 console.log("console.log is the type of =>"+typeof console.log);
 console.log( "Math is the type of =>"+typeof Math);
 console.log("Math.random is the type of =>"+typeof Math.random);
+// let college={
+//   teachers:"saba,sam,jhon,martin,khimesh",
+//   ['subjects-IT']:'english,maaths,ai,dbms',
+//   branch_hod:function (name){
+
+//    console.log(`name of the hod is ${name}` );
+// };
+// college.branch_hod("zara");
+// };
+let college = {
+  teachers: "saba,sam,jhon,martin,khimesh",
+  ['subjects-IT']: 'english,maths,ai,dbms',
+
+  branch_hod: function(name) {
+    console.log(`name of the hod is ${name}`);
+  }
+};
+
+college.branch_hod("zara");
+console.log(college.teachers);
+console.log(college['subjects-IT']);
+console.log(Object.entries(college));
+
+console.log(college);
+console.log(JSON.stringify(college));//json does not accept the functions
+console.log(typeof JSON.stringify);
+console.log(typeof JSON);
+let jsonstring=JSON.stringify(college);
+let jsonstrings=JSON.parse(jsonstring);
+console.log(jsonstring);
+console.log('haa');
+console.log(jsonstrings);
+console.log(JSON.parse(jsonstring));//=>converts to object again
+localStorage.setItem("box",jsonstring);//this stores the data permantely with you
+let value = localStorage.getItem('box');
+console.log(value);
 </script>
 
 </html>
