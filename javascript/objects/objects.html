@@ -12,50 +12,50 @@
 
 </body>
 <script>
-  //         const product={
-  //             name:'socks',
-  //             prize:1090
-  //         };
-  //         console.log(product);
-  //         console.log(product.name);//product.name=> is called doubt notation
-  //         console.log(product.prize);
-  //         //we can also change the value of the objects
-  //      product.name='anjumunnisa';
-  //      product.prize=1000;
+          const product={
+              name:'socks',
+              prize:1090
+          };
+          console.log(product);
+          console.log(product.name);//product.name=> is called doubt notation
+          console.log(product.prize);
+          //we can also change the value of the objects
+       product.name='anjumunnisa';
+       product.prize=1000;
 
-  //        console.log(product);
-  //         console.log(product.name);
-  //         console.log(product.prize);
+         console.log(product);
+          console.log(product.name);
+          console.log(product.prize);
 
-  //         let school={
-  //             name:'anjumunnisa',
-  //             id:226
-  //         }
-  //         console.log(school.name);
-  //         console.log(school.id);
-  //         school.name='sara';
-  //         console.log("I have changed the name as "+school.name);
-  //         console.log(school)
-  //     ;
-  //     // add new property to that school like standard section etc...
-  //     school.standard=true;
-  //     console.log(school);
-  //     school.standard='AIML CSE';
-  //     console.log(school);
-  //     delete school.standard;;
-  //     console.log(school);
-  //     school.parents=true;
-  //     school.parents='sana sam';
-  //     console.log(school);
-  //     // what type of the data is 
-  //     //like for example for data types we use yo check like
-  //     let a=5;
-  //     console.log(typeof a);
-  //     let bool=true;console.log(typeof bool);
+          let school={
+              name:'anjumunnisa',
+              id:226
+          }
+          console.log(school.name);
+          console.log(school.id);
+          school.name='sara';
+          console.log("I have changed the name as "+school.name);
+          console.log(school)
+      ;
+      // add new property to that school like standard section etc...
+      school.standard=true;
+      console.log(school);
+      school.standard='AIML CSE';
+      console.log(school);
+      delete school.standard;;
+      console.log(school);
+      school.parents=true;
+      school.parents='sana sam';
+      console.log(school);
+      // what type of the data is 
+      //like for example for data types we use yo check like
+      let a=5;
+      console.log(typeof a);
+      let bool=true;console.log(typeof bool);
 
-  // by the same way we can check for object oriented language of the java script 
-  // console.log("this is the type of=> " +typeof (school));
-  // //we use the object make our code more organized
+  //by the same way we can check for object oriented language of the java script 
+  console.log("this is the type of=> " +typeof (school));
+  //we use the object make our code more organized
 
   let age = 'student_age';
   //
@@ -139,6 +139,61 @@ console.log(JSON.parse(jsonstring));//=>converts to object again
 localStorage.setItem("box",jsonstring);//this stores the data permantely with you
 let value = localStorage.getItem('box');
 console.log(value);
+
+console.log('hello'.length);
+console.log('hello'.toUpperCase());
+console.log('true'.toString());
+console.log(3.0.toString());
+// null property and unundefined .method() is not applicable
+const objects={
+  message:'hello',
+}
+const objects1=objects;//COPY BY REFERENCE
+console.log(objects1);
+console.log(Object.entries(objects));
+objects.message='good job';
+console.log(objects);
+objects.name="zeba .taniya";
+console.log(objects);
+console.log(objects1);
+const objects2={
+  message:'good job!'
+};
+let objects3={
+  message:'good job!'
+};
+console.log(objects2===objects3);//stores differently reference(location or stores in computers memory)
+console.log(JSON.stringify(objects2) === JSON.stringify(objects3)); // true
+console.log(objects===objects1);//i equaited over there
+ //short trick for  objects
+ const object4={
+  message: 'Good job!',
+  prize:750
+ }
+ //const message=object4.message;
+ const{message,prize}=object4;
+ console.log(message,"\n", prize);
+ const objects5={
+  //message:message,
+  message,// we use these when varaible and variable value is same we use this property
+prize,//that to already defined one 
+ };
+ console.log(objects5);
+ let objects6={
+  method:function(){
+    console.log('mom');
+return 'maa';
+  },
+  moms(){
+    console.log('yes zeba tell me your answer?')
+    return 'zeba';
+  },
+  
+ };
+ (objects6.method());
+ console.log(objects6.method());// return
+ objects6.moms();// i called 
+ console.log(objects6.moms());// i call to get return value
 </script>
 
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>functions</title>
+     </head>
+     <body>
+        <button onclick ="updateCalculation('1')">1</button>
+        <button onclick="updateCalculation('2')">2</button>
+<button onclick="updateCalculation('+')">+</button>
+<button onclick="
+  calculation = eval(calculation);
+  localStorage.setItem('calculation', calculation);
+  console.log(calculation);
+">=</button>
+
+<button onclick="
+  calculation = '';
+  localStorage.setItem('calculation', calculation);
+  console.log(calculation);
+">Clear</button>
+
+     </body>
+     <script>
+        
+  let  calculation = localStorage.getItem('calculation') || '';
+
+  function updateCalculation(value) {
+    calculation += value;
+
+    localStorage.setItem('calculation', calculation);
+
+    console.log(calculation);
+   
+  }
+
+        let amazonItems={
+            "name of the item":"basketeball",
+            price:2095,
+        }
+        console.log(amazonItems["name of the item"] );
+        console.log(amazonItems.price);
+        amazonItems.price=amazonItems.price+500;
+       console.log( JSON.stringify(amazonItems));
+        amazonItems['deliverey-time'] ='3 days';
+console.log(amazonItems);     
+(localStorage.setItem("box1",JSON.stringify(amazonItems)));   
+console.log(localStorage.getItem("box1"));
+console.log(JSON.parse(localStorage.getItem("box1")));
+//task2
+
+const product1 = {
+  name: 'Zara Shirt',
+  price: 560
+};
+ 
+const product2 = {
+  name: 'Nike Shirt',
+  price: 800
+};
+function comparePrice(product1, product2){
+      if (product1.price < product2.price) {
+    return product1;
+  } else {
+    return product2;
+  }
+};
+
+console.log(product1);
+//task3
+let products1={
+'name':'santro',
+'price':2500000,
+}
+let products2=products1;
+if(products1===products2){
+    console.log(products1);
+}
+else{
+    console.log('false');
+}
+let a={
+    name:'anjumunnisa',
+    classes:'1 to 5',
+    wish:'good morning'
+}
+console.log(a.wish.toUpperCase());
+console.log((a.name+'\n').repeat(5));
+
+
+ 
+
+
+
+
+  </script>
+     </html>
