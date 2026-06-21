@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+<button>hello</button>
+<button class="js-button">second button</button>
+    <p class="name">Sara</p>
+
+</body>
+<script>
+// console.log(document.title);
+// document.title='changed';
+// console.log(document.body);
+// console.log(typeof document.body);
+// console.log(document.body.innerHTML);
+// document.body.innerHTML='<button>Good job!</button>';
+
+// what is document.quryselector()
+//lets us get an element from the page and put in the javascript
+
+console.log(document.querySelector('button'))
+//  let heading=document.querySelector('title');//=> i cahnged the heading 
+//  heading.innerHTML='abudabi'
+//  console.log(heading);
+
+console.log(document.querySelector('button').innerHTML);
+(document.querySelector('button').innerHTML)='changed'
+// if we have more tahn  one button
+console.log(document.querySelector('.js-button'));
+document.querySelector('title').innerHTML='saba';
+let para = document.querySelector('.name');
+console.log(para.innerHTML);
+const buttonElement=document.querySelector('.js-button');
+console.log(buttonElement);
+</script>
+
+
+</html>
