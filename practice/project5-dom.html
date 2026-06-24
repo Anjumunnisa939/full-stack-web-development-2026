@@ -17,12 +17,21 @@
    class="JS-SUBSCRIBE-BUTTON" >Subscribe</button>
 <br>
    <button onclick="coins()" id="zam">tail</button>
-<p>AMAZOAN SHIPPING CALCULATOR</p>
-<input placeholder="cost of order">
-<button onclick="call()" class="set">calculate</button>
-<p class="show"></p>
+   <div>
+<p>AMAZON SHIPPING CALCULATOR</p>
+<input type="number" placeholder="Cost of order" class="digit" onkeydown="console.log(event.key);
+if(event.key==='Enter'){
+cost();
 
-
+}">
+<button onclick="cost()">calculate</button>
+<p id="cost"></p>
+</div>
+<input  class="doll" onkeydown="console.log(event.key);
+if(event.key==='Enter'){
+    result();
+}">
+<button onclick="result()">submit</button>
 <script>
 function subscribe(){
     const buttonElement=document.querySelector('.JS-SUBSCRIBE-BUTTON') ;
@@ -47,25 +56,35 @@ buttonElement.innerHTML='Subscribed';
     }
    // console.log(zam);
     }
-
+function cost(){
+    // here the main point is that whenever we work with dom it always conmvert into number into string so we have convert into the number before the queryselector
+let values = Number(document.querySelector('.digit').value);
+     console.log((values))
+     if(values>40){
+         values=(values)+10;
+        console.log("greater than 40 =>",values);
+     }
+     else{
+        console.log("less than 40");
+     }
+document.getElementById('cost').innerHTML=`THE TOTAL AMOUNT YOU HAVE TO PAY :$${values}`;
+localStorage.setItem('box1',JSON.stringify(values));
+ 
+ 
+    }
+   window.onload=function(){
+const data = JSON.parse(localStorage.getItem('box1'));
+//document.getElementById('cost').innerHTML=`THE TOTAL AMOUNT YOU HAVE TO PAY :${values}`;
+   }
 
 </script>
 <script>
-    function call(){
-         let amount;
-         document.querySelector('input').value=amount;
-        if(amount<40){
-            amount= amount+10;;
-          
-          
-        }
-        
-       
-    
-  }
-    // const tag=document.querySelector('.set');
-    //     console.log(tag); 
-   
+    function result(){
+    const a= document.querySelector('.doll');
+    let job =a.value;
+    //=>we can also write the value  direct like  document.quryselector('.doll').value;
+   console.log(` my value is ${job}`);
+    }
 </script>
 </body>
 
