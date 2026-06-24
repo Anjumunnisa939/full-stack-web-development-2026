@@ -12,52 +12,13 @@
 
 <body>
 
-    <style>
-        h1 {
-            text-align: center;
-        }
-
-        button {
-            border: solid;
-            border-width: 2px;
-            background-color: white;
-            border-radius: 10px;
-            width: 100px;
-
-
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            background: radial-gradient(circle,
-                    rgba(238, 174, 202, 1) 0%,
-                    rgba(148, 187, 233, 1) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: lightblue;
-            color: black;
-gap:10px
-        }
-
-        button:hover {
-            background-color: lightblue;
-            color: black;
-            padding: 10px 10px
-        }
-        button:active{
-            background-color: lightblue;
-            color: black;
-            padding: 10px 10px
-        }
-    </style>
+   
 
     <h1>Rock Paper Scissors</h1>
    <button onclick="playGames('rock')">Rock</button>
    <button onclick="playGames('paper');"> paper</button>
    <button onclick="playGames('scissors') ">Scissors</button>
-  <p class="js-score"></p>
+  
     <!-- Math.random number lies in between 0<=number<1 -->
     
 <button onclick="score.wins=0;
@@ -123,7 +84,6 @@ function playGames(game) {
             result = 'Win';
         }
     }
-    //score card
 if(result==='Win'){
     score.wins=score.wins+1;
 
@@ -143,7 +103,6 @@ localStorage.setItem('score',JSON.stringify(score));
     alert(`You picked ${game}. Computer picked ${computerMove}. Result = ${result}
      wins${score.wins} ::loses${score.losses}:: tie${score.ties}`);
 }
-
 
 function pickComputerMove() {
     const randomNumber = Math.random();

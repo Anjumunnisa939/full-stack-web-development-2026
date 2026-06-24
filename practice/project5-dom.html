@@ -17,8 +17,10 @@
    class="JS-SUBSCRIBE-BUTTON" >Subscribe</button>
 <br>
    <button onclick="coins()" id="zam">tail</button>
-
-
+<p>AMAZOAN SHIPPING CALCULATOR</p>
+<input placeholder="cost of order">
+<button onclick="call()" class="set">calculate</button>
+<p class="show"></p>
 
 
 <script>
@@ -45,6 +47,25 @@ buttonElement.innerHTML='Subscribed';
     }
    // console.log(zam);
     }
+
+
+</script>
+<script>
+    function call(){
+         let amount;
+         document.querySelector('input').value=amount;
+        if(amount<40){
+            amount= amount+10;;
+          
+          
+        }
+        
+       
+    
+  }
+    // const tag=document.querySelector('.set');
+    //     console.log(tag); 
+   
 </script>
 </body>
 
