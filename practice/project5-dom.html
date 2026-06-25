@@ -27,10 +27,7 @@ cost();
 <button onclick="cost()">calculate</button>
 <p id="cost"></p>
 </div>
-<input  class="doll" onkeydown="console.log(event.key);
-if(event.key==='Enter'){
-    result();
-}">
+<input  class="doll" onkeydown="scorecard(event)";> 
 <button onclick="result()">submit</button>
 <script>
 function subscribe(){
@@ -79,12 +76,65 @@ const data = JSON.parse(localStorage.getItem('box1'));
 
 </script>
 <script>
+    function scorecard(event){
+console.log(event.key);
+if(event.key==='Enter'){
+    result();
+}
+    }
     function result(){
     const a= document.querySelector('.doll');
     let job =a.value;
     //=>we can also write the value  direct like  document.quryselector('.doll').value;
    console.log(` my value is ${job}`);
     }
+     String(25)
+    //console.LOG('25'+5);
+    console.log ('25'+'5');
+    console.log(Number('25')+5);
+    // WE HAVE LEARNT ABOUTTHE DOCUMENT "DOCUMENT." WHERE AS WE NEED UP DATA ENTRY ON 
+    // IF WANN WORK OUT WITH WHOLE BROWSER THEN WE HAVE TO WORK THROW IT 
+    window.document
+    console.log(window)
+      console.log(window.document)
+    console.log(window.innerWidth);
+console.log(window.innerHeight);
+// Why do we learn about window.document?
+
+// The browser provides a global object called "window".
+// Window represents the entire browser environment.
+
+// Inside window, there are many objects like:
+// window.document  -> represents our HTML webpage
+// window.console   -> represents browser console
+// window.alert()   -> shows browser alert box
+
+
+window.alert("Hello");
+
+// Here we are directly telling the browser:
+// "Window object, execute the alert function."
+
+
+alert("Hello");
+
+// Here JavaScript internally searches for alert() inside the global object.
+// Since alert belongs to window, it automatically understands:
+
+window.alert("Hello");
+
+// So both codes give the same output.
+//alert("hello")
+    //    |
+//         ↓
+// JavaScript engine checks global object
+//         |
+//         ↓
+// Finds alert inside window
+//         |
+//         ↓
+// Runs window.alert("hello")
+
 </script>
 </body>
 

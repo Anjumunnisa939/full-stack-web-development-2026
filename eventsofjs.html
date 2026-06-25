@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS OF ACTION</title>
+</head>
+<body style="gap:25;">
+    <!--  this oncliked event -->
+<button  onclick="hello()">click me </button>
+ <!-- this onkeydown event it tells us what we entering by keyboard -->
+<input = "clic()" onkeydown="check(event)"  id="sam">
+</body>
+<script>
+       // this oncliked event
+function hello(){
+    console.log(`button clicked`);
+}
+// User clicks button
+//         ↓
+// click event happens
+//         ↓
+//  function runs
+</script>
+<script> 
+function clic(event){
+ console.log(event.key);
+ let val = document.getElementById("sam").value;
+  
+
+
+if(event.key==="Enter"){
+   
+        if(Number(val) === 25){
+            console.log("winner");
+        }
+        else{
+            console.log("loser");
+        }
+    
+    }
+}
+
+</script>
+</html>
