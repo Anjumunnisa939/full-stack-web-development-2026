@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+<style>
+    body{
+background-color: black;
+font-family: Arial, Helvetica, sans-serif;
+    }
+    .outer{
+        padding:10px;
+        background-color: whitesmoke;
+        width:200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .cart{
+        background-color: yellow;
+        color:black;
+        padding: 10px;
+        width:150px;
+        border-radius:45px;
+    }
+    .box2,.box3{
+        background-color:white;
+        margin-top:50px;
+        padding:20px;
+        width:300px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .but1{
+        background-color: black;
+        color:white;
+        padding:10px;
+    }
+    .but2,.js-button{
+        background-color: whitesmoke;
+        color:black;
+        padding: 10px;
+        width:180px;
+    }
+    .outer-toggle{
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 40px;
+        background-color: white;
+        color:black;
+        cursor: pointer;
+        margin-top: 25px;
+        width:100px;
+        height:30px;
+
+    }
+    .is-toggled{
+        padding:10px;
+        background-color:whitesmoke;
+        color:black;
+        width:80px;
+        
+    }
+    .js-button {
+  background-color: white;
+  color: black;
+}
+
+    .clicked {
+  background-color: green;
+  color: white;
+}
+.box4{
+    background-color: whitesmoke;
+    padding:20px;
+    margin-top:10px;
+    display: flex;
+    column-gap:30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.on{
+    background-color: white;
+    color:black;
+    padding: 10px;
+    
+
+}
+.button{
+    background-color: black;
+    color:white;
+
+}
+
+</style>
+<body>
+   <div class="outer">
+    <button class="cart">Add to Cart</button>
+   </div> 
+   <div class="box2">
+    <button class="but1">Request now</button>
+    <button class="but2">Sehedule for later</button>
+   </div>
+   //task3
+   <div class="box3" >
+   <button onclick="call()"class="js-button">Test</button>
+</div>
+<div class="outer-toggle">
+<button onclick="toggleclass()" class="is-toggled">Gaming</button>
+</div>
+<div class="box4">
+    <button onclick="on(this)"  class="on">Gaming</button>
+    <button onclick="on(this)" class="on">Music</button>
+    <button onclick="on(this)" class="on">Tech</button>
+</div>
+<script>
+    function call(){
+        let a=document.querySelector('.js-button');
+        console.log(a.classList.contains('js-button'));//this we use ti check is class present or not
+    }
+    //task4
+// function toggleclass(){
+// let z=document.querySelector('.is-toggled');
+// z.classList.add('clicked');
+// //z.classList.remove('is-toggled');
+// console.log(z);
+// }
+function toggleclass() {
+  let z = document.querySelector('.is-toggled');
+
+  if (z.classList.contains('clicked')) {
+    z.classList.remove('clicked');
+  } else {
+    z.classList.add('clicked');
+  }
+}
+function on(button){
+    const buttons = document.querySelectorAll('.on');
+console.log(button);
+    buttons.forEach(function(btn) {
+        btn.classList.remove('button');
+    });
+
+    button.classList.add('button');
+}
+
+</script>
+</body>
+</html>

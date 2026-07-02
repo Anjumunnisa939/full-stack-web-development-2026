@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops and Array</title>
+</head>
+<body>
+
+    <script> 
+ const myArray=[10,20,30];
+ console.log(myArray);
+ console.log(myArray[0]);
+  console.log(myArray[1]);
+   console.log(myArray[2]);
+   //if i wann change the value
+   myArray[0]=99;
+   console.log(myArray);
+   let students = [
+  {
+    name: "Anjum",
+    age: 19
+  },
+  {
+    name: "Ali",
+    age: 20
+  }
+];
+console.log(students);
+let multiple=[1,'hello',true,{name:'socks'},[1,2]];
+console.log(multiple[3]);
+console.log(typeof [1,2]);//what type of the an array is =>object 
+console.log(Array.isArray([1,2,3]));//checks whether is an array or not 
+ console.log(myArray.length);//is tells what is lenmgth of the array
+ myArray.push(100);//add the value at the end of the array
+ console.log(myArray);
+ myArray.splice(0,1);//splice is use to remove the values in pair wise (index,no.of didgits);
+ 
+ </script>
+ </body>
+</html>
