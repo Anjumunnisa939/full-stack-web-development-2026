@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+  
+}
+.todo-list{
+    display: flex;
+    gap:2px;
+}
+.heading{
+    margin-top: 25px;;
+}
+.container {
+    background: white;
+    width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+.add{
+    padding:10px 30px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #218838;
+    border-radius: 45px;
+
+
+}
+
+.todo-input-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr auto;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    gap:5px ;
+}
+.todo-name,
+.todo-date {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.add-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+.todo-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.todo-row p {
+    margin: 0;
+    word-break: break-word;
+}
+
+.delete-btn {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b3002d;
+}
+.delete{
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+justify-content: center;
+text-align: center;
+align-items: center;
+display: flex;
+  gap:30px
+
+}
+.common{
+    display: flex;
+    flex-direction: row;
+}
+.delbut{
+    padding: 10px 30px;
+    border-radius: 45px;
+    background-color: red;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.todo-list{
+    display: flex;
+    flex-direction: column;
+  
+}

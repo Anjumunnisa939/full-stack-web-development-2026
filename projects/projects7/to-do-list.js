@@ -13,15 +13,26 @@ document.querySelector('.screen').innerHTML=name;
 rendertodolist();
 }
 rendertodolist();
-function rendertodolist(){
-let todoListHTML='';
-for(let i=0;i<todoList.length;i++){
-    const todo=todoList[i];
-    const html=`<p>${todo}</p>`
-    todoListHTML=todoListHTML+html;
-}
-console.log(todoListHTML);
-document.querySelector('.js-todo-list').innerHTML=todoList;
+function rendertodolist() {
+    let todoListHTML = '';
+
+    for (let i = 0; i < todoList.length; i++) {
+        const todo = todoList[i];
+
+        const html = `
+            <p>
+                ${todo}
+                <button onclick="
+                    todoList.splice(${i}, 1);
+                    rendertodolist();
+                ">Delete</button>
+            </p>
+        `;
+
+        todoListHTML += html;
+    }
+
+    document.querySelector('.js-todo-list').innerHTML = todoListHTML;
 }
 // const todolist=[
 //     'make dinner,wash dishes','watch youtube'
