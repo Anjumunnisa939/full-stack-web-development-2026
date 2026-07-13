@@ -1,25 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>functions calls</title>
-     </head>
-     <body>
 
-     </body>
-     <script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions calls</title>
+</head>
 
-      function findLargest(arr){
-        let largest=arr[0];
-        for(let i =0;i<arr.length;i++){
-            if(arr[i]>largest){
-                largest=arr[i];
+<body>
+    <input type="text" class="Names" placeholder="Enter student name">
+    <button onclick="addStudent([document.querySelector('.Names').value])">
+    Add
+    </button>
+    <p class="outputs" id="out"></p>
+    <button onclick="del()" class="del">delete</button>
+<div>
+    <input type="text" class="Nameing"    placeholder="Enter student name"
+    onkeydown="handleEnter(event)">
+    <button onclick="searching()">search</button>
+</div>
+</body>
+<script>
+        let calling = JSON.parse(localStorage.getItem('box1'))||[];//local storage
+    displayStudents();
+
+function displayStudents() {
+    document.querySelector('.outputs').innerHTML = calling.join("<br>");
+}
+
+        function addStudent(names) {
+      if (names[0].trim() === "") {
+        return; // Don't add empty values
+    }
+        for (let i = 0; i < names.length; i++) {
+            calling.push(names[i]);
+      }
+        console.log(calling)//array prints
+        document.querySelector('.outputs').innerHTML = calling;//print on the browser
+        document.querySelector('.Names').value = '';//after entering becomes as usual
+         localStorage.setItem('box1', JSON.stringify(calling));//in global store 
+    
+    }
+  
+function del() {
+    calling.splice(0,1);
+
+    localStorage.setItem("box1", JSON.stringify(calling));
+
+    displayStudents();
+}
+
+    function findLargest(arr) {
+        let largest = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+
+            if (arr[i] > largest) {
+                console.log(arr[i]);
+                largest = arr[i];
             }
         }
         return largest;
-      } 
-      console.log(findLargest([12,45,7,23]));
-     </script>
-     </html>
+    }
+    console.log(findLargest([12, 45, 7, 23, 67, 89, 34, 56]));
+
+    function doubleArray(nums) {
+        const numsdoubled = [];
+        for (let i = 0; i < nums.length; i++) {
+            let num = nums[i];
+            if (num === 0) {
+                return numsdoubled;
+            }
+            numsdoubled.push(num * 2);
+        }
+        console.log(numsdoubled);
+
+    }
+    doubleArray([1, 1, 3]);
+    doubleArray([20, 30, 40, 0, 5]);
+
+let lists=['annu','sam','jam','konny','liba','anjum','xeha'];
+console.log(lists.length)
+function searching() {
+
+    let found = document.querySelector('.Nameing').value;
+
+    for (let i = 0; i < lists.length; i++) {
+
+        if (lists[i] === found) {
+            console.log("Yes! Exactly, you are in the list with the name " + found);
+            return;
+        }
+
+    }
+
+    console.log("Name not found");
+}
+function handleEnter(event) {
+    if (event.key === "Enter") {
+        searching();
+    }
+}
+</script>
+
+</html>

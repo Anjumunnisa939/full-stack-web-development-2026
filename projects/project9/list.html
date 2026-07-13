@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-list</title>
+</head>
+
+<body>
+    <h1>TO-DO-LIST</h1>
+    <div>
+        <input type="text" class="working" placeholder="Add the rountines">
+        <input type="date" class="dates">
+        <button onclick="call()">Add</button>
+    </div>
+    <p class="display">
+    </p>
+<script>
+  function call() {
+    let x = document.querySelector('.working').value;
+
+    if (x === '') {
+        alert('Fill the routine');
+        return;
+    }
+
+    todolist.push(x);
+
+    document.querySelector('.display').innerHTML = todolist;
+
+    document.querySelector('.working').value = '';
+}
+</script>
+</body>
+</html>

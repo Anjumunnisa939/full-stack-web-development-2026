@@ -35,11 +35,42 @@
 
 // }
 // console.log(total);
-const numbers = [1, 2, 3, 4];
-const doublenum = [];
-for (let i = 0; i < numbers.length; i++) {
-    let val = numbers[i];
-    doublenum.push(val * 2);
-}
+// const numbers = [1, 2, 3, 4];
+// const doublenum = [];
+// for (let i = 0; i < numbers.length; i++) {
+//     let val = numbers[i];
+//     doublenum.push(val * 2);
+// }
 
-console.log(doublenum);
+// console.log(doublenum);
+const array1=[1,2,3];
+const array2=array1.slice();
+array2.push(4);
+console.log(array1);
+console.log(array2);
+
+
+array2.splice(1,1);
+console.log(array2);
+const [fristValue,secondValue
+
+] =[1,2,3,4];
+console.log(fristValue);// This is called array destructuring in JavaScript.
+for(let i=0;i<=10;i++){
+   // console.log(i);
+    if((i%3)=== 0){
+        //console.log("the values is:"+i);
+        continue;
+    }
+    console.log(i);
+}
+console.log("while loop")
+let x=0;
+while(x<=10){
+    if(x%2===0){
+        x++;
+        continue;//these skip the number and continue to another number
+    }
+    console.log(x);
+    x++;
+}
