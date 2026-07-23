@@ -15,7 +15,9 @@ rendertodolist();
 rendertodolist();
 function rendertodolist() {
     let todoListHTML = '';
-
+  todoList.forEach(function(todo,index){
+    
+  })
     for (let i = 0; i < todoList.length; i++) {
         const todo = todoList[i];
 
@@ -33,6 +35,7 @@ function rendertodolist() {
     }
 
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+    document.querySelector()
 }
 // const todolist=[
 //     'make dinner,wash dishes','watch youtube'

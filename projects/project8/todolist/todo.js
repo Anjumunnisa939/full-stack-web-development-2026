@@ -1,5 +1,9 @@
 let todoList = [];
 
+document.querySelector('.js-add-todo-button').addEventListener('click',()=>{
+    addTodo();
+});
+
 function addTodo() {
 
     const name = document.querySelector('.todo-name').value;
@@ -25,34 +29,67 @@ function addTodo() {
 
 function renderTodoList() {
 
-    let todoHTML = '';
+ let todoHTML = '';
 
-    for (let i = 0; i < todoList.length; i++) {
-
-        const todo = todoList[i];
+    todoList.forEach((todo)=>{
 
         todoHTML += `
         <div class="common">
             <div class="delete">
-            
-               <p style="color:blue"> ${todo.name }</p>
-                         
-               <p style="color:orange"> ${todo.dueDate}</p>
-                <button onclick="deleteTodo(${i})"class="delbut">
+                <p style="color:blue">${todo.name}</p>
+                <p style="color:orange">${todo.dueDate}</p>
+
+                <button class="delbut js-delete-todo-button">
                     Delete
                 </button>
             </div>
-            </div>
+        </div>
         `;
-    
+
     }
+    );
+    // onclick="deleteTodo(${index})"
+    // for (let i = 0; i < todoList.length; i++) {
+
+    //     const todo = todoList[i];
+
+    //     todoHTML += `
+    //     <div class="common">
+    //         <div class="delete">
+            
+    //            <p style="color:blue"> ${todo.name }</p>
+                         
+    //            <p style="color:orange"> ${todo.dueDate}</p>
+    //             <button onclick="deleteTodo(${i})"class="delbut">
+    //                 Delete
+    //             </button>
+    //         </div>
+    //         </div>
+    //     `;
+    
+    // }
 
     document.querySelector('.todo-list').innerHTML = todoHTML;
+
+// document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton,index)=>{
+//     deleteButton.addEventListener('click',()=>{
+//         todoList.splice(index,1);
+//         renderTodoList();
+//     })
+// })
+//document.querySelector('.todo-list').innerHTML = todoHTML;
+
+document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index) => {
+    deleteButton.addEventListener('click', () => {
+        todoList.splice(index, 1);
+        renderTodoList();
+    });
+});
 }
 
-function deleteTodo(index) {
+// function deleteTodo(index) {
 
-    todoList.splice(index, 1);
+//     todoList.splice(index, 1);
 
-    renderTodoList();
-}
+//     renderTodoList();
+// }

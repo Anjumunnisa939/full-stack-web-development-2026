@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <input type="text" class="Names" placeholder="Enter student name">
+    <input type="text" class="Names" placeholder="Enter student name"> -->
     <button onclick="addStudent([document.querySelector('.Names').value])">
     Add
     </button>
-    <p class="outputs" id="out"></p>
+      <p class="outputs" id="out"></p>
     <button onclick="del()" class="del">delete</button>
 <div>
     <input type="text" class="Nameing"    placeholder="Enter student name"
@@ -21,7 +21,7 @@
     <button onclick="searching()">search</button>
 </div>
 </body>
-<script>
+<script> 
         let calling = JSON.parse(localStorage.getItem('box1'))||[];//local storage
     displayStudents();
 
@@ -101,6 +101,15 @@ function handleEnter(event) {
         searching();
     }
 }
+ //adavanced functions like foreach loop 
+
+['make-dinner','wash dishes','watch youtube'].forEach(function(value,index){
+console.log(index);
+console.log(value);
+});
+
+
+
 </script>
 
 </html>
